@@ -344,7 +344,14 @@ const initialScriptureDB: ScriptureDB = {
         AMP: "15 He said to them, 'But who do you [yourselves] say that I am?'",
         NLT: "15 Then he asked them, 'But who do you say I am?'",
     },
-
+    "Proverbs 6:9-11": {
+        KJV: "9 How long wilt thou sleep, O sluggard? when wilt thou arise out of thy sleep? 10 Yet a little sleep, a little slumber, a little folding of the hands to sleep: 11 So shall thy poverty come as one that travelleth, and thy want as an armed man.",
+        NKJV: "9 How long will you slumber, O sluggard? When will you rise from your sleep? 10 A little sleep, a little slumber, A little folding of the hands to sleep— 11 So shall your poverty come on you like a prowler, And your need like an armed man.",
+        NIV: "9 How long will you lie there, you sluggard? When will you get up from your sleep? 10 A little sleep, a little slumber, a little folding of the hands to rest— 11 and poverty will come on you like a thief and scarcity like an armed man.",
+        ESV: "9 How long will you lie there, O sluggard? When will you arise from your sleep? 10 A little sleep, a little slumber, a little folding of the hands to rest, 11 and poverty will come upon you like a robber, and want like an armed man.",
+        AMP: '9 How long will you lie down, O lazy one? When will you arise from your sleep [and learn self-discipline]? 10 "Yet a little sleep, a little slumber, A little folding of the hands to lie down and rest"— 11 So your poverty will come like an approaching prowler who walks [slowly, but surely] And your need [will come] like an armed man [making you helpless].',
+        NLT: "9 But you, lazybones, how long will you sleep? When will you wake up? 10 A little extra sleep, a little more slumber, a little folding of the hands to rest— 11 then poverty will pounce on you like a bandit; scarcity will attack you like an armed robber.",
+    },
     "Luke 15:1-2": {
         KJV: "1 Then drew near unto him all the publicans and sinners for to hear him. 2 And the Pharisees and scribes murmured, saying, This man receiveth sinners, and eateth with them.",
         NKJV: "1 Then all the tax collectors and the sinners drew near to Him to hear Him. 2 And the Pharisees and scribes complained, saying, 'This Man receives sinners and eats with them.'",
@@ -361,6 +368,22 @@ const initialScriptureDB: ScriptureDB = {
         ESV: "37 All that the Father gives me will come to me, and whoever comes to me I will never cast out.",
         AMP: "37 All that My Father gives Me will come to Me; and the one who comes to Me I will most certainly not cast out [I will never, never reject anyone who follows Me].",
         NLT: "37 However, those the Father has given me will come to me, and I will never reject them.",
+    },
+    "Luke 15:2": {
+        KJV: "2 And the Pharisees and scribes murmured, saying, This man receiveth sinners, and eateth with them.",
+        NKJV: "2 And the Pharisees and scribes complained, saying, 'This Man receives sinners and eats with them.'",
+        NIV: "2 But the Pharisees and the teachers of the law muttered, 'This man welcomes sinners and eats with them.'",
+        ESV: "2 And the Pharisees and the scribes grumbled, saying, 'This man receives sinners and eats with them.'",
+        AMP: "2 Both the Pharisees and the scribes began muttering and complaining, saying, 'This man accepts and welcomes sinners and eats with them.'",
+        NLT: "2 This made the Pharisees and teachers of religious law complain that he was associating with such sinful people—even eating with them!",
+    },
+    "John 6:66-69": {
+        KJV: "66 From that time many of his disciples went back, and walked no more with him. 67 Then said Jesus unto the twelve, Will ye also go away? 68 Then Simon Peter answered him, Lord, to whom shall we go? thou hast the words of eternal life. 69 And we believe and are sure that thou art that Christ, the Son of the living God.",
+        NKJV: "66 From that time many of His disciples went back and walked with Him no more. 67 Then Jesus said to the twelve, 'Do you also want to go away?' 68 But Simon Peter answered Him, 'Lord, to whom shall we go? You have the words of eternal life.' 69 And we have believed and have come to know that You are the Christ, the Son of the living God.",
+        NIV: "66 From this time many of his disciples turned back and no longer followed him. 67 'You do not want to leave too, do you?' Jesus asked the Twelve. 68 Simon Peter answered him, 'Lord, to whom shall we go? You have the words of eternal life.' 69 We have come to believe and to know that you are the Holy One of God.",
+        ESV: "66 After this many of his disciples turned back and no longer walked with him. 67 So Jesus said to the Twelve, 'Do you want to go away as well?' 68 Simon Peter answered him, 'Lord, to whom shall we go? You have the words of eternal life.' 69 And we have believed, and have come to know, that you are the Holy One of God.",
+        AMP: "66 From that time many of His disciples turned away and no longer walked with Him. 67 Then Jesus said to the Twelve, 'You do not want to go away also, do you?' 68 Simon Peter answered Him, 'Lord, to whom shall we go? You have the words of eternal life.' 69 And we have believed and we know and are convinced that You are the Christ, the Son of the living God.",
+        NLT: "66 After this, many of his disciples turned back and no longer followed him. 67 'You do not want to leave too, do you?' Jesus asked the Twelve. 68 Simon Peter answered him, 'Lord, to whom shall we go? You have the words of eternal life.' 69 We have come to believe and know that you are the Holy One of God.",
     },
 
     "Matthew 11:28": {
@@ -379,6 +402,14 @@ const initialScriptureDB: ScriptureDB = {
         ESV: "27 My sheep hear my voice, and I know them, and they follow me.",
         AMP: "27 The sheep that are My own hear My voice and listen to Me; I know them, and they follow Me.",
         NLT: "27 My sheep listen to my voice; I know them, and they follow me.",
+    },
+    "John 6:69": {
+        KJV: "69 And we believe and are sure that thou art that Christ, the Son of the living God.",
+        NKJV: "69 And we have believed and have come to know that You are the Christ, the Son of the living God.",
+        NIV: "69 We have come to believe and to know that you are the Holy One of God.",
+        ESV: "69 And we have believed, and have come to know, that you are the Holy One of God.",
+        AMP: "69 And we have believed and we know and are convinced that You are the Christ, the Son of the living God.",
+        NLT: "69 We have come to believe and know that you are the Holy One of God.",
     },
 
     "John 8:12": {
@@ -647,113 +678,66 @@ const SundaySchoolApp = () => {
         prayerPoints: string[];
     };
 
-    // const [contentData, setContentData] = useState<ContentData>({
-    //     lessonDate: "March 22, 2015",
-    //     lessonTitle: "The Sleep That Endangers",
-    //     memoryVerse:
-    //         "And he cometh and findeth them sleeping, and saith unto Peter, Simon, sleepest thou? couldest not thou watch one hour? — Mark 14:37",
-    //     memoryVerseRef: "Mark 14:37",
-    //     introduction:
-    //         "Sleep is a temporary state of unconsciousness of the body. Therefore nobody is aware of his environment while asleep. This is the advantage period of the evil ones to invade unsuspecting humanity. Jesus declared that the Good man (A reasonable person) will prevent the thief if he knows his hour of attack — Matt 24:43. Unfortunately, many Christians are neither watching nor careful for Satan's next proposed hit because of the relative peace and comfort they enjoy resulting from previous efforts or grace. If one sleeps with fire on the now, he will be engulfed later.",
-    //     introScriptures: ["Matthew 24:43"],
-    //     aims: "To awaken Christians that have lost consciousness of eminent dangers in the present world they were delivered from.",
-    //     objectives:
-    //         "That the believer may be equipped and ready to undo the wiles of the enemy.",
-    //     lessonIntro:
-    //         "A man planted good seed in his farm and while all were asleep at due time the enemy. Corrupted the farm with his seed. Removing the evil seed was predicted to be more dangerous than leaving it with the product. Consequently, the good seed and the owner suffered the unforeseen.",
-    //     lessonPoints: [
-    //         {
-    //             title: "While Men Sleep (Vs 25)",
-    //             content:
-    //                 "Having defined what sleep is we need to appreciate the fact that there are three types of sleep. The sleep of Death, Carnal rest and unawareness of environment. This lesson is referring more to the last two. The time of sleep is the time of rest, unreadiness, weakness, no watch, etc and that is why it is the enemy's advantage period. Evil is always infused at this period into mankind.",
-    //             scriptures: ["Matthew 13:25"],
-    //             subPoints: [],
-    //         },
-    //         {
-    //             title: "Time of Sleep (Vs 25)",
-    //             content:
-    //                 "Sleep is unavoidable and there is a time when everybody sleeps but Jesus revealed that it is the opportune time of Satan. You may be justified to sleep as others either physically or mentally but refuse to sleep then because an enemy is watching for opportunity.",
-    //             scriptures: ["Matthew 13:25"],
-    //             subPoints: [],
-    //         },
-    //         {
-    //             title: "Good Intention Corrupted (Vs 24)",
-    //             content:
-    //                 "This man no doubt had good intentions for planting his seed but it was the occasion of sleep that allowed for the corrupting of the seed and far. Don't allow your good intentions, family, jobs or business, health and portion to be corrupted through sleep.",
-    //             scriptures: ["Matthew 13:24"],
-    //             subPoints: [],
-    //         },
-    //         {
-    //             title: "No Immediate Solution (Vs 28–30)",
-    //             content:
-    //                 "There was no immediate solution after the enemy sowed his tare among the good seed. The good seed had to strive to survive the hostility of the tares until the harvest time because of sleep. You don't want that to be your portion.",
-    //             scriptures: ["Matthew 13:28-30"],
-    //             subPoints: [],
-    //         },
-    //         {
-    //             title: "Watching for Yourself (Mark 14:38)",
-    //             content:
-    //                 "When men sleep only you can watch for yourself or else your portion will be corrupted. Isa 59:16. This man sowed and went to sleep but it was his work that was corrupted. See vs 24–25.",
-    //             scriptures: ["Mark 14:38", "Isaiah 59:16", "Matthew 13:24-25"],
-    //             subPoints: [],
-    //         },
-    //     ],
-    //     conclusion:
-    //         "There are dangers of sleeping just because others do. Stay awake at odd hours to protect your own. Prov 6:9–11.",
-    //     conclusionScriptures: ["Proverbs 6:9-11"],
-    //     prayerPoints: [
-    //         "Lord, awaken my spirit to the dangers that surround me. Help me to stay vigilant and alert at all times.",
-    //         "Father, give me the grace to watch and pray even when others around me are sleeping spiritually.",
-    //         "Holy Spirit, open my eyes to see the enemy's schemes before they manifest. Let me not be caught unaware.",
-    //         "Lord, protect my family, business, health, and all that concerns me from the corruption that comes during times of spiritual sleep.",
-    //         "Father, help me to be a watchman for my own soul. Give me the strength to stay awake when others sleep, that I may guard what You have entrusted to me.",
-    //     ],
-    // });
     const [contentData, setContentData] = useState<ContentData>({
-        lessonDate: "October 26, 2025",
-        lessonTitle: "Your Position About Jesus Christ (Part 1)",
+        lessonDate: "April 12, 2015",
+        lessonTitle: "Your Position About Jesus Christ – Part 2",
         memoryVerse:
-            "He saith unto them, but whom say ye that I am? — Matt. 16:15",
-        memoryVerseRef: "Matthew 16:15",
+            "And we believe and are sure that thou art that Christ, the son of the living God. — John 6:69",
+        memoryVerseRef: "John 6:69",
         introduction:
-            "People hold different views or opinions concerning the Lord Jesus Christ and have related with Him accordingly. The enemies of the Lord have no doubt tried to worsen the varied opinions by spoiling the minds of people from having a personal relationship with Jesus. In the midst of these confused opinions, it is imperative to know your position about Him and opposer’s reasons. What do you personally say about Jesus?",
-        introScriptures: [],
-        aims: "To reveal man’s contempt of Christ and efforts to sabotage His gesture.",
-        objectives: "That man may have a personal conviction about Jesus.",
+            "Man in his several attempts to access God failed but gathered more reasons to become religious. Others had God so inclined to them but distorted His doctrines and aims to reveal Himself to them. These few groups included people neither God inclined to nor fulfilled at the coming of the Lord Jesus. Instead of repenting towards God, they resorted to spoiling the minds of men against Christ to cover their sins and shame which had God-forsaken ways.",
+        introScriptures: ["Luke 15:1–2"],
+        aims: "To reveal man's contempt of Christ and efforts to sabotage Jesus.",
+        objectives:
+            "To help the hearers have a personal conviction about Jesus.",
         lessonIntro:
-            "The Lord Jesus on His way to Jerusalem made several stops at Galilee, Samaria, and Judea to touch the lives of men through teaching and healing. Consequently, many people came to Him, but the jealous Elders of Israel were bent on discouraging people from the Lord. Let us consider more on the lesson that these texts teach.",
+            "In our last study, we discovered that the Pharisees and scribes were at the front line of those who opposed Jesus and His ministry. We also saw how a huge number of religious leaders and clans were working to discourage the followers of Jesus Christ.",
         lessonPoints: [
             {
-                title: "Your Coming to Jesus",
+                title: "Judgement and Condemnation verse 2 ",
                 content:
-                    "Your coming or closeness to Jesus is a problem to mere men and to Satan. They had thought that you will remain in that wretched and miserable condition helplessly. Your coming would change and bring salvation to you and sap them of lordship over you. That is why they are doing everything possible to spoil Jesus and Christianity to you. Their fears are that you won’t be involved in the evil they perpetrate.",
-                scriptures: [],
-                subPoints: [],
+                    "Nothing destroys a man and his course faster than character assassination. Jesus was increasing while they were decreasing. Jesus had all they didn’t have, and the people kept pressing to Him. To stop this, they brought damnable accusations against Him to bring Him down before the people. They said in conclusion:",
+                scriptures: ["Luke 15:2"],
+                subPoints: [
+                    {
+                        title: " This Man Receives Sinners",
+                        content:
+                            "This means that He is one among the sinners so that the people should see reasons to turn from Him.",
+                    },
+                    {
+                        title: "This Man Eats With Sinners",
+                        content:
+                            "It means that He is defiled. In a nutshell, they have passed judgment that He is insignificant to follow.",
+                    },
+                ],
             },
             {
-                title: "No Selection, No Restriction",
-                content:
-                    "The Pharisees and scribes are a selected few of the Jews from the class of the elite. Their aims were far from glorifying God but self-satisfaction. The coming of Jesus opened the doors to all and sundry without class sentiments. This led to Jesus’ popularity over them with a greater number of followers. They kept resisting their unpopularity by spoiling Jesus because of this and more.",
+                title: "The Pharisees and Scribes",
+                content: "",
                 scriptures: [],
-                subPoints: [],
-            },
-            {
-                title: "Come to Hear Jesus",
-                content:
-                    "This is the right thing to do when you come to Jesus. This focus has changed concerning many — a reason for passive religion in churches. Those who hear Him are blessed and are troubled by the Pharisees to turn away from Him.",
-                scriptures: [],
-                subPoints: [],
+                subPoints: [
+                    {
+                        title: "Pharisees",
+                        content:
+                            "These are religious lawyers, hypocrites, and enemies of the Christ who pretend to be working for God. There are many of such people around you who use philosophy and legalism to discourage you from following Jesus.",
+                    },
+                    {
+                        title: "Scribes",
+                        content:
+                            "These are custodians of the Jewish faith and traditions. They are always in the temple reading and teaching the people. They compile the laws and the prophets and are supposed to teach the people the truth of God’s word. But they have chosen to turn people from the truth to preserve their beliefs and confuse people from following Jesus.",
+                    },
+                ],
             },
         ],
         conclusion:
-            "Your entrance to Jesus Christ is a rare opportunity and you must guard it jealously lest you fall away unto condemnation.",
-        conclusionScriptures: [],
+            "Strive to know Christ better in a personal way. This you do by study and practice of the Word with constant fellowship. This will keep you from the jealous opposers of Jesus Christ. — John 6:66–69",
+        conclusionScriptures: ["John 6:66-69"],
         prayerPoints: [
-            "Lord, help me to maintain a genuine relationship with Jesus amidst opposing opinions.",
-            "Father, give me the courage to stand firm in my conviction about Christ.",
-            "Holy Spirit, open my understanding to truly know who Jesus is to me.",
-            "Lord, protect my faith from the influence of those who despise the truth about Jesus.",
-            "Father, help me to always come to hear and follow Jesus sincerely.",
+            "Lord, help me to stand firm in my conviction about Jesus Christ.",
+            "Father, protect me from those who seek to turn my heart away from the truth.",
+            "Holy Spirit, teach me to know Christ personally and deeply.",
+            "Lord, grant me wisdom to overcome false doctrines and legalistic influences.",
+            "Father, help me to walk in constant fellowship with Christ and resist every opposition.",
         ],
     });
 
