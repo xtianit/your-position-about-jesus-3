@@ -549,7 +549,7 @@ const SundaySchoolApp = () => {
     };
 
     const [contentData, setContentData] = useState<ContentData>({
-        lessonDate: "April 19, 2015",
+        lessonDate: "November 23, 2025",
         lessonTitle: "Your Position About Jesus Christ - Part 3",
         memoryVerse:
             "And such as do wickedly against the covenant shall he corrupt by flatteries: but the people that do know their God shall be strong, and do exploits.",
