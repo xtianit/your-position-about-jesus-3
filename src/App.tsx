@@ -50,291 +50,6 @@ type BibleVersions = {
 
 type ScriptureDB = Record<string, BibleVersions>;
 
-// const initialScriptureDB: ScriptureDB = {
-//     "Mark 14:37": {
-//         KJV: "37 And he cometh, and findeth them sleeping, and saith unto Peter, Simon, sleepest thou? couldest not thou watch one hour?",
-//         NKJV: '37 Then He came and found them sleeping, and said to Peter, "Simon, are you sleeping? Could you not watch one hour?"',
-//         NIV: '37 Then he returned to his disciples and found them sleeping. "Simon," he said to Peter, "are you asleep? Couldn\'t you keep watch for one hour?"',
-//         ESV: '37 And he came and found them sleeping, and he said to Peter, "Simon, are you asleep? Could you not watch one hour?"',
-//         AMP: '37 Then He came [back] and found them sleeping, and said to Peter, "Simon, are you asleep? Were you unable to keep watch for one hour?"',
-//         NLT: '37 Then he returned and found the disciples asleep. He said to Peter, "Simon, are you asleep? Couldn\'t you watch with me even one hour?"',
-//     },
-//     "Matthew 13:24-30": {
-//         KJV: "24 Another parable put he forth unto them, saying, The kingdom of heaven is likened unto a man which sowed good seed in his field: 25 But while men slept, his enemy came and sowed tares among the wheat, and went his way. 26 But when the blade was sprung up, and brought forth fruit, then appeared the tares also. 27 So the servants of the householder came and said unto him, Sir, didst not thou sow good seed in thy field? from whence then hath it tares? 28 He said unto them, An enemy hath done this. The servants said unto him, Wilt thou then that we go and gather them up? 29 But he said, Nay; lest while ye gather up the tares, ye root up also the wheat with them. 30 Let both grow together until the harvest: and in the time of harvest I will say to the reapers, Gather ye together first the tares, and bind them in bundles to burn them: but gather the wheat into my barn.",
-//         NKJV: "24 Another parable He put forth to them, saying: \"The kingdom of heaven is like a man who sowed good seed in his field; 25 but while men slept, his enemy came and sowed tares among the wheat and went his way. 26 But when the grain had sprouted and produced a crop, then the tares also appeared. 27 So the servants of the owner came and said to him, 'Sir, did you not sow good seed in your field? How then does it have tares?' 28 He said to them, 'An enemy has done this.' The servants said to him, 'Do you want us then to go and gather them up?' 29 But he said, 'No, lest while you gather up the tares you also uproot the wheat with them. 30 Let both grow together until the harvest, and at the time of harvest I will say to the reapers, \"First gather together the tares and bind them in bundles to burn them, but gather the wheat into my barn.\"'\"",
-//         NIV: "24 Jesus told them another parable: \"The kingdom of heaven is like a man who sowed good seed in his field. 25 But while everyone was sleeping, his enemy came and sowed weeds among the wheat, and went away. 26 When the wheat sprouted and formed heads, then the weeds also appeared. 27 The owner's servants came to him and said, 'Sir, didn't you sow good seed in your field? Where then did the weeds come from?' 28 'An enemy did this,' he replied. The servants asked him, 'Do you want us to go and pull them up?' 29 'No,' he answered, 'because while you are pulling the weeds, you may uproot the wheat with them. 30 Let both grow together until the harvest. At that time I will tell the harvesters: First collect the weeds and tie them in bundles to be burned; then gather the wheat and bring it into my barn.'\"",
-//         ESV: "24 He put another parable before them, saying, \"The kingdom of heaven may be compared to a man who sowed good seed in his field, 25 but while his men were sleeping, his enemy came and sowed weeds among the wheat and went away. 26 So when the plants came up and bore grain, then the weeds appeared also. 27 And the servants of the master of the house came and said to him, 'Master, did you not sow good seed in your field? How then does it have weeds?' 28 He said to them, 'An enemy has done this.' So the servants said to him, 'Then do you want us to go and gather them?' 29 But he said, 'No, lest in gathering the weeds you root up the wheat along with them. 30 Let both grow together until the harvest, and at harvest time I will tell the reapers, \"Gather the weeds first and bind them in bundles to be burned, but gather the wheat into my barn.\"'\"",
-//         AMP: "24 Jesus gave them another parable [to consider], saying, \"The kingdom of heaven is like a man who sowed good seed in his field. 25 But while his men were sleeping, his enemy came and sowed weeds [resembling wheat] among the wheat, and went away. 26 So when the plants sprouted and formed grain, the weeds appeared also. 27 The servants of the owner came to him and said, 'Sir, did you not sow good and clean seed in your field? Then how does it have weeds in it?' 28 He replied to them, 'An enemy has done this.' The servants asked him, 'Then do you want us to go and pull them out?' 29 But he said, 'No; because as you pull out the weeds [in the act of gathering them], you may uproot the wheat with them. 30 Let them grow together until the harvest, and at harvest time I will tell the reapers, \"First gather the weeds and tie them in bundles to be burned; but gather the wheat into my barn.\"'\"",
-//         NLT: "24 Here is another story Jesus told: \"The Kingdom of Heaven is like a farmer who planted good seed in his field. 25 But that night as the workers slept, his enemy came and planted weeds among the wheat, then slipped away. 26 When the crop began to grow and produce grain, the weeds also grew. 27 The farmer's workers went to him and said, 'Sir, the field where you planted that good seed is full of weeds! Where did they come from?' 28 'An enemy has done this!' the farmer exclaimed. 'Should we pull out the weeds?' his workers asked. 29 'No,' he replied, 'you'll uproot the wheat if you do. 30 Let both grow together until the harvest. Then I will tell the harvesters to sort out the weeds, tie them into bundles, and burn them, and to put the wheat in the barn.'\"",
-//     },
-//     "Matthew 13:24-25": {
-//         KJV: "24 Another parable put he forth unto them, saying, The kingdom of heaven is likened unto a man which sowed good seed in his field: 25 But while men slept, his enemy came and sowed tares among the wheat, and went his way.",
-//         NKJV: '24 Another parable He put forth to them, saying: "The kingdom of heaven is like a man who sowed good seed in his field; 25 but while men slept, his enemy came and sowed tares among the wheat and went his way."',
-//         NIV: '24 Jesus told them another parable: "The kingdom of heaven is like a man who sowed good seed in his field. 25 But while everyone was sleeping, his enemy came and sowed weeds among the wheat, and went away."',
-//         ESV: '24 He put another parable before them, saying, "The kingdom of heaven may be compared to a man who sowed good seed in his field, 25 but while his men were sleeping, his enemy came and sowed weeds among the wheat and went away."',
-//         AMP: '24 Jesus gave them another parable [to consider], saying, "The kingdom of heaven is like a man who sowed good seed in his field. 25 But while his men were sleeping, his enemy came and sowed weeds [resembling wheat] among the wheat, and went away."',
-//         NLT: '24 Here is another story Jesus told: "The Kingdom of Heaven is like a farmer who planted good seed in his field. 25 But that night as the workers slept, his enemy came and planted weeds among the wheat, then slipped away."',
-//     },
-//     "Matthew 13:25": {
-//         KJV: "25 But while men slept, his enemy came and sowed tares among the wheat, and went his way.",
-//         NKJV: "25 But while men slept, his enemy came and sowed tares among the wheat and went his way.",
-//         NIV: "25 But while everyone was sleeping, his enemy came and sowed weeds among the wheat, and went away.",
-//         ESV: "25 But while his men were sleeping, his enemy came and sowed weeds among the wheat and went away.",
-//         AMP: "25 But while his men were sleeping, his enemy came and sowed weeds [resembling wheat] among the wheat, and went away.",
-//         NLT: "25 But that night as the workers slept, his enemy came and planted weeds among the wheat, then slipped away.",
-//     },
-
-//     "Matthew 24:43": {
-//         KJV: "43 But know this, that if the goodman of the house had known in what watch the thief would come, he would have watched, and would not have suffered his house to be broken up.",
-//         NKJV: "43 But know this, that if the master of the house had known what hour the thief would come, he would have watched and not allowed his house to be broken into.",
-//         NIV: "43 But understand this: If the owner of the house had known at what time of night the thief was coming, he would have kept watch and would not have let his house be broken into.",
-//         ESV: "43 But know this, that if the master of the house had known in what part of the night the thief was coming, he would have stayed awake and would not have let his house be broken into.",
-//         AMP: "43 But understand this: If the head of the house had known what time of the night the thief was coming, he would have been on the alert and would not have allowed his house to be broken into.",
-//         NLT: "43 Understand this: If a homeowner knew exactly when a burglar was coming, he would keep watch and not permit his house to be broken into.",
-//     },
-//     "Matthew 13:24": {
-//         KJV: "24 Another parable put he forth unto them, saying, The kingdom of heaven is likened unto a man which sowed good seed in his field:",
-//         NKJV: "24 Another parable He put forth to them, saying: 'The kingdom of heaven is like a man who sowed good seed in his field;'",
-//         NIV: "24 Jesus told them another parable: 'The kingdom of heaven is like a man who sowed good seed in his field.'",
-//         ESV: "24 He put another parable before them, saying, 'The kingdom of heaven may be compared to a man who sowed good seed in his field,'",
-//         AMP: "24 Jesus gave them another parable [to consider], saying, 'The kingdom of heaven is like a man who sowed good seed in his field.'",
-//         NLT: "24 Here is another story Jesus told: 'The Kingdom of Heaven is like a farmer who planted good seed in his field.'",
-//     },
-
-//     "Mark 14:38": {
-//         KJV: "38 Watch ye and pray, lest ye enter into temptation. The spirit truly is ready, but the flesh is weak.",
-//         NKJV: "38 Watch and pray, lest you enter into temptation. The spirit indeed is willing, but the flesh is weak.",
-//         NIV: "38 Watch and pray so that you will not fall into temptation. The spirit is willing, but the flesh is weak.",
-//         ESV: "38 Watch and pray that you may not enter into temptation. The spirit indeed is willing, but the flesh is weak.",
-//         AMP: "38 Keep actively watching and praying that you may not come into temptation; the spirit is willing, but the body is weak.",
-//         NLT: "38 Keep watch and pray, so that you will not give in to temptation. For the spirit is willing, but the body is weak!",
-//     },
-//     "Proverbs 6:9-11": {
-//         KJV: "9 How long wilt thou sleep, O sluggard? when wilt thou arise out of thy sleep? 10 Yet a little sleep, a little slumber, a little folding of the hands to sleep: 11 So shall thy poverty come as one that travelleth, and thy want as an armed man.",
-//         NKJV: "9 How long will you slumber, O sluggard? When will you rise from your sleep? 10 A little sleep, a little slumber, A little folding of the hands to sleep— 11 So shall your poverty come on you like a prowler, And your need like an armed man.",
-//         NIV: "9 How long will you lie there, you sluggard? When will you get up from your sleep? 10 A little sleep, a little slumber, a little folding of the hands to rest— 11 and poverty will come on you like a thief and scarcity like an armed man.",
-//         ESV: "9 How long will you lie there, O sluggard? When will you arise from your sleep? 10 A little sleep, a little slumber, a little folding of the hands to rest, 11 and poverty will come upon you like a robber, and want like an armed man.",
-//         AMP: '9 How long will you lie down, O lazy one? When will you arise from your sleep [and learn self-discipline]? 10 "Yet a little sleep, a little slumber, A little folding of the hands to lie down and rest"— 11 So your poverty will come like an approaching prowler who walks [slowly, but surely] And your need [will come] like an armed man [making you helpless].',
-//         NLT: "9 But you, lazybones, how long will you sleep? When will you wake up? 10 A little extra sleep, a little more slumber, a little folding of the hands to rest— 11 then poverty will pounce on you like a bandit; scarcity will attack you like an armed robber.",
-//     },
-//     "Isaiah 59:16": {
-//         KJV: "16 And he saw that there was no man, and wondered that there was no intercessor: therefore his arm brought salvation unto him; and his righteousness, it sustained him.",
-//         NKJV: "16 He saw that there was no man, And wondered that there was no intercessor; Therefore His own arm brought salvation for Him; And His own righteousness, it sustained Him.",
-//         NIV: "16 He saw that there was no one, he was appalled that there was no one to intervene; so his own arm achieved salvation for him, and his own righteousness sustained him.",
-//         ESV: "16 He saw that there was no man, and wondered that there was no one to intercede; then his own arm brought him salvation, and his righteousness upheld him.",
-//         AMP: "16 He saw that there was no man [to plead for truth and right], And He was amazed that there was no one to intercede [on behalf of truth and right]; Therefore His own arm brought salvation to Him, And His own righteousness sustained Him.",
-//         NLT: "16 He was amazed to see that no one intervened to help the oppressed. So he himself stepped in to save them with his strong arm, and his justice sustained him.",
-//     },
-//     "Matthew 13:28-30": {
-//         KJV: "28 He said unto them, An enemy hath done this. The servants said unto him, Wilt thou then that we go and gather them up? 29 But he said, Nay; lest while ye gather up the tares, ye root up also the wheat with them. 30 Let both grow together until the harvest: and in the time of harvest I will say to the reapers, Gather ye together first the tares, and bind them in bundles to burn them: but gather the wheat into my barn.",
-//         NKJV: "28 He said to them, 'An enemy has done this.' The servants said to him, 'Do you want us then to go and gather them up?' 29 But he said, 'No, lest while you gather up the tares you also uproot the wheat with them. 30 Let both grow together until the harvest, and at the time of harvest I will say to the reapers, \"First gather together the tares and bind them in bundles to burn them, but gather the wheat into my barn.\"'",
-//         NIV: "28 'An enemy did this,' he replied. The servants asked him, 'Do you want us to go and pull them up?' 29 'No,' he answered, 'because while you are pulling the weeds, you may uproot the wheat with them. 30 Let both grow together until the harvest. At that time I will tell the harvesters: First collect the weeds and tie them in bundles to be burned; then gather the wheat and bring it into my barn.'",
-//         ESV: "28 He said to them, 'An enemy has done this.' So the servants said to him, 'Then do you want us to go and gather them?' 29 But he said, 'No, lest in gathering the weeds you root up the wheat along with them. 30 Let both grow together until the harvest, and at harvest time I will tell the reapers, \"Gather the weeds first and bind them in bundles to be burned, but gather the wheat into my barn.\"'",
-//         AMP: "28 He replied to them, 'An enemy has done this.' The servants asked him, 'Then do you want us to go and pull them out?' 29 But he said, 'No; because as you pull out the weeds [in the act of gathering them], you may uproot the wheat with them. 30 Let them grow together until the harvest; and at harvest time I will tell the reapers, \"First gather the weeds and tie them in bundles to be burned; but gather the wheat into my barn.\"'",
-//         NLT: "28 'An enemy has done this!' the farmer exclaimed. 'Should we pull out the weeds?' his workers asked. 29 'No,' he replied, 'you’ll uproot the wheat if you do. 30 Let both grow together until the harvest. Then I will tell the harvesters to sort out the weeds, tie them into bundles, and burn them, and to put the wheat in the barn.'",
-//     },
-// };
-// const initialScriptureDB: ScriptureDB = {
-//     "Proverbs 11:30": {
-//         KJV: "30 The fruit of the righteous is a tree of life; and he that winneth souls is wise.",
-//         NKJV: "30 The fruit of the righteous is a tree of life, And he who wins souls is wise.",
-//         NIV: "30 The fruit of the righteous is a tree of life, and the one who is wise saves lives.",
-//         ESV: "30 The fruit of the righteous is a tree of life, and whoever captures souls is wise.",
-//         AMP: "30 The fruit of the [consistently] righteous is a tree of life, And he who is wise captures and wins souls [for God—he gathers them for eternity].",
-//         NLT: "30 The seeds of good deeds become a tree of life; a wise person wins friends.",
-//     },
-
-//     "Matthew 10:7": {
-//         KJV: "7 And as ye go, preach, saying, The kingdom of heaven is at hand.",
-//         NKJV: "7 And as you go, preach, saying, ‘The kingdom of heaven is at hand.’",
-//         NIV: "7 As you go, proclaim this message: ‘The kingdom of heaven has come near.’",
-//         ESV: "7 And proclaim as you go, saying, ‘The kingdom of heaven is at hand.’",
-//         AMP: "7 And as you go, preach, saying, ‘The kingdom of heaven is at hand.’",
-//         NLT: "7 Go and announce to them that the Kingdom of Heaven is near.",
-//     },
-
-//     "Mark 16:15": {
-//         KJV: "15 And he said unto them, Go ye into all the world, and preach the gospel to every creature.",
-//         NKJV: "15 And He said to them, “Go into all the world and preach the gospel to every creature.”",
-//         NIV: "15 He said to them, “Go into all the world and preach the gospel to all creation.”",
-//         ESV: "15 And he said to them, “Go into all the world and proclaim the gospel to the whole creation.”",
-//         AMP: "15 And He said to them, “Go into all the world and preach the gospel to all creation.”",
-//         NLT: "15 And then he told them, “Go into all the world and preach the Good News to everyone.”",
-//     },
-
-//     "Matthew 5:14": {
-//         KJV: "14 Ye are the light of the world. A city that is set on an hill cannot be hid.",
-//         NKJV: "14 You are the light of the world. A city that is set on a hill cannot be hidden.",
-//         NIV: "14 You are the light of the world. A town built on a hill cannot be hidden.",
-//         ESV: "14 You are the light of the world. A city set on a hill cannot be hidden.",
-//         AMP: "14 You are the light of [Christ to] the world. A city set on a hill cannot be hidden;",
-//         NLT: "14 You are the light of the world—like a city on a hilltop that cannot be hidden.",
-//     },
-
-//     "1 Thessalonians 2:19-20": {
-//         KJV: "19 For what is our hope, or joy, or crown of rejoicing? Are not even ye in the presence of our Lord Jesus Christ at his coming? 20 For ye are our glory and joy.",
-//         NKJV: "19 For what is our hope, or joy, or crown of rejoicing? Is it not even you in the presence of our Lord Jesus Christ at His coming? 20 For you are our glory and joy.",
-//         NIV: "19 For what is our hope, our joy, or the crown in which we will glory in the presence of our Lord Jesus when he comes? Is it not you? 20 Indeed, you are our glory and joy.",
-//         ESV: "19 For what is our hope or joy or crown of boasting before our Lord Jesus at his coming? Is it not you? 20 For you are our glory and joy.",
-//         AMP: "19 For what is our hope or joy or crown of exultation [when we rejoice in triumph]? Is it not you, in the presence of our Lord Jesus at His coming? 20 For you are [indeed] our glory and our joy!",
-//         NLT: "19 After all, what gives us hope and joy, and what will be our proud reward and crown as we stand before our Lord Jesus when he returns? It is you! 20 Yes, you are our pride and joy.",
-//     },
-
-//     "Philippians 4:1": {
-//         KJV: "1 Therefore, my brethren dearly beloved and longed for, my joy and crown, so stand fast in the Lord, my dearly beloved.",
-//         NKJV: "1 Therefore, my beloved and longed-for brethren, my joy and crown, so stand fast in the Lord, beloved.",
-//         NIV: "1 Therefore, my brothers and sisters, you whom I love and long for, my joy and crown, stand firm in the Lord in this way, dear friends!",
-//         ESV: "1 Therefore, my brothers, whom I love and long for, my joy and crown, stand firm thus in the Lord, my beloved.",
-//         AMP: "1 Therefore, my [dear ones] whom I love and long for, my joy and crown, in this way stand firm in the Lord, my beloved.",
-//         NLT: "1 Therefore, my dear brothers and sisters, stay true to the Lord. I love you and long to see you, dear friends, for you are my joy and the crown I receive for my work.",
-//     },
-
-//     "Daniel 12:3": {
-//         KJV: "3 And they that be wise shall shine as the brightness of the firmament; and they that turn many to righteousness as the stars for ever and ever.",
-//         NKJV: "3 Those who are wise shall shine like the brightness of the firmament, and those who turn many to righteousness like the stars forever and ever.",
-//         NIV: "3 Those who are wise will shine like the brightness of the heavens, and those who lead many to righteousness, like the stars for ever and ever.",
-//         ESV: "3 And those who are wise shall shine like the brightness of the sky above; and those who turn many to righteousness, like the stars forever and ever.",
-//         AMP: "3 Those who are [spiritually] wise will shine brightly like the brightness of the expanse of heaven, and those who lead many to righteousness, like the stars forever and ever.",
-//         NLT: "3 Those who are wise will shine as bright as the sky, and those who lead many to righteousness will shine like the stars forever.",
-//     },
-
-//     "Luke 10:17": {
-//         KJV: "17 And the seventy returned again with joy, saying, Lord, even the devils are subject unto us through thy name.",
-//         NKJV: "17 Then the seventy returned with joy, saying, “Lord, even the demons are subject to us in Your name.”",
-//         NIV: "17 The seventy-two returned with joy and said, “Lord, even the demons submit to us in your name.”",
-//         ESV: "17 The seventy-two returned with joy, saying, “Lord, even the demons are subject to us in your name!”",
-//         AMP: "17 The seventy returned with joy, saying, “Lord, even the demons are subject to us in Your name.”",
-//         NLT: "17 When the seventy-two disciples returned, they joyfully reported to him, “Lord, even the demons obey us when we use your name!”",
-//     },
-
-//     "John 15:16": {
-//         KJV: "16 Ye have not chosen me, but I have chosen you, and ordained you, that ye should go and bring forth fruit, and that your fruit should remain: that whatsoever ye shall ask of the Father in my name, he may give it you.",
-//         NKJV: "16 You did not choose Me, but I chose you and appointed you that you should go and bear fruit, and that your fruit should remain, that whatever you ask the Father in My name He may give you.",
-//         NIV: "16 You did not choose me, but I chose you and appointed you so that you might go and bear fruit—fruit that will last—and so that whatever you ask in my name the Father will give you.",
-//         ESV: "16 You did not choose me, but I chose you and appointed you that you should go and bear fruit and that your fruit should abide, so that whatever you ask the Father in my name, he may give it to you.",
-//         AMP: "16 You have not chosen Me, but I have chosen you and I have appointed and placed and purposefully planted you, so that you would go and bear fruit and keep on bearing, and that your fruit will remain and be lasting, so that whatever you ask of the Father in My name [as My representative] He may give to you.",
-//         NLT: "16 You didn’t choose me. I chose you. I appointed you to go and produce lasting fruit, so that the Father will give you whatever you ask for, using my name.",
-//     },
-
-//     "1 Corinthians 3:8": {
-//         KJV: "8 Now he that planteth and he that watereth are one: and every man shall receive his own reward according to his own labour.",
-//         NKJV: "8 Now he who plants and he who waters are one, and each one will receive his own reward according to his own labor.",
-//         NIV: "8 The one who plants and the one who waters have one purpose, and they will each be rewarded according to their own labor.",
-//         ESV: "8 He who plants and he who waters are one, and each will receive his wages according to his labor.",
-//         AMP: "8 He who plants and he who waters are one [in purpose], but each will receive his own reward according to his own labor.",
-//         NLT: "8 The one who plants and the one who waters work together with the same purpose. And both will be rewarded for their own hard work.",
-//     },
-
-//     "2 Corinthians 5:10": {
-//         KJV: "10 For we must all appear before the judgment seat of Christ; that every one may receive the things done in his body, according to that he hath done, whether it be good or bad.",
-//         NKJV: "10 For we must all appear before the judgment seat of Christ, that each one may receive the things done in the body, according to what he has done, whether good or bad.",
-//         NIV: "10 For we must all appear before the judgment seat of Christ, so that each of us may receive what is due us for the things done while in the body, whether good or bad.",
-//         ESV: "10 For we must all appear before the judgment seat of Christ, so that each one may receive what is due for what he has done in the body, whether good or evil.",
-//         AMP: "10 For we [believers will be called to account and] must all appear before the judgment seat of Christ, so that each one may be repaid for what has been done in the body, whether good or bad [that is, each will be held responsible for his actions, purposes, goals, motives—the use or misuse of his time, opportunities, and abilities].",
-//         NLT: "10 For we must all stand before Christ to be judged. We will each receive whatever we deserve for the good or evil we have done in this earthly body.",
-//     },
-
-//     "Matthew 5:16": {
-//         KJV: "16 Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.",
-//         NKJV: "16 Let your light so shine before men, that they may see your good works and glorify your Father in heaven.",
-//         NIV: "16 In the same way, let your light shine before others, that they may see your good deeds and glorify your Father in heaven.",
-//         ESV: "16 In the same way, let your light shine before others, so that they may see your good works and give glory to your Father who is in heaven.",
-//         AMP: "16 Let your light so shine before men that they may see your moral excellence and your praiseworthy, noble, and good deeds and recognize and honor and praise and glorify your Father Who is in heaven.",
-//         NLT: "16 In the same way, let your good deeds shine out for all to see, so that everyone will praise your heavenly Father.",
-//     },
-
-//     "Matthew 9:36-38": {
-//         KJV: "36 But when he saw the multitudes, he was moved with compassion on them, because they fainted, and were scattered abroad, as sheep having no shepherd. 37 Then saith he unto his disciples, The harvest truly is plenteous, but the labourers are few; 38 Pray ye therefore the Lord of the harvest, that he will send forth labourers into his harvest.",
-//         NKJV: "36 But when He saw the multitudes, He was moved with compassion for them, because they were weary and scattered, like sheep having no shepherd. 37 Then He said to His disciples, 'The harvest truly is plentiful, but the laborers are few. 38 Therefore pray the Lord of the harvest to send out laborers into His harvest.'",
-//         NIV: "36 When he saw the crowds, he had compassion on them, because they were harassed and helpless, like sheep without a shepherd. 37 Then he said to his disciples, 'The harvest is plentiful but the workers are few. 38 Ask the Lord of the harvest, therefore, to send out workers into his harvest field.'",
-//         ESV: "36 When he saw the crowds, he had compassion for them, because they were harassed and helpless, like sheep without a shepherd. 37 Then he said to his disciples, 'The harvest is plentiful, but the laborers are few; 38 therefore pray earnestly to the Lord of the harvest to send out laborers into his harvest.'",
-//         AMP: "36 When He saw the crowds, He was moved with compassion and pity for them, because they were dispirited and distressed, like sheep without a shepherd. 37 Then He said to His disciples, 'The harvest is indeed plentiful, but the workers are few. 38 So pray to the Lord of the harvest to send out workers into His harvest.'",
-//         NLT: "36 When he saw the crowds, he had compassion on them because they were confused and helpless, like sheep without a shepherd. 37 He said to his disciples, 'The harvest is great, but the workers are few. 38 So pray to the Lord who is in charge of the harvest; ask him to send more workers into his fields.'",
-//     },
-// };
-
-// const quizQuestions = [
-//     {
-//         q: "According to Mark 14:37, what did Jesus ask Peter?",
-//         a: [
-//             "Could you not watch one hour?",
-//             "Why are you afraid?",
-//             "Do you love me?",
-//             "Where is your faith?",
-//         ],
-//         correct: 0,
-//     },
-//     {
-//         q: "What happened while men slept in the parable?",
-//         a: [
-//             "The enemy sowed tares among the wheat",
-//             "The harvest was stolen",
-//             "A storm destroyed the crops",
-//             "Angels protected the field",
-//         ],
-//         correct: 0,
-//     },
-//     {
-//         q: "What is the main aim of this lesson?",
-//         a: [
-//             "To awaken Christians who have lost consciousness of eminent dangers",
-//             "To teach about farming techniques",
-//             "To explain the benefits of physical rest",
-//             "To condemn all forms of sleep",
-//         ],
-//         correct: 0,
-//     },
-//     {
-//         q: "What is the objective of this lesson?",
-//         a: [
-//             "That the believer may be equipped and ready to undo the wiles of the enemy",
-//             "To help Christians sleep better at night",
-//             "To teach proper prayer postures",
-//             "To explain dream interpretation",
-//         ],
-//         correct: 0,
-//     },
-//     {
-//         q: "According to the lesson, when is the enemy's advantage period?",
-//         a: [
-//             "During times of sleep, rest, and unreadiness",
-//             "During prayer meetings",
-//             "During worship services",
-//             "During fasting periods",
-//         ],
-//         correct: 0,
-//     },
-//     {
-//         q: "Why was there no immediate solution after the tares were sown?",
-//         a: [
-//             "Removing the tares would uproot the wheat as well",
-//             "The servants were too lazy",
-//             "The farmer didn't care",
-//             "There were no tools available",
-//         ],
-//         correct: 0,
-//     },
-//     {
-//         q: "According to Matthew 24:43, what would the good man do if he knew when the thief would come?",
-//         a: [
-//             "He would have watched and prevented the break-in",
-//             "He would have called the police",
-//             "He would have hidden his possessions",
-//             "He would have moved to another house",
-//         ],
-//         correct: 0,
-//     },
-//     {
-//         q: "What does the lesson warn will happen if you sleep spiritually?",
-//         a: [
-//             "Your good intentions, family, jobs, business, health and portion will be corrupted",
-//             "You will become physically stronger",
-//             "You will gain more wisdom",
-//             "Nothing will happen",
-//         ],
-//         correct: 0,
-//     },
-// ];
 const initialScriptureDB: ScriptureDB = {
     "Matthew 16:15": {
         KJV: "15 He saith unto them, But whom say ye that I am?",
@@ -428,6 +143,160 @@ const initialScriptureDB: ScriptureDB = {
         ESV: "6 Jesus said to him, 'I am the way, and the truth, and the life. No one comes to the Father except through me.'",
         AMP: "6 Jesus said to him, 'I am the [only] Way [to God] and the [real] Truth and the [real] Life; no one comes to the Father but through Me.'",
         NLT: "6 Jesus told him, 'I am the way, the truth, and the life. No one can come to the Father except through me.'",
+    },
+    "Daniel 11:32": {
+        KJV: "32 And such as do wickedly against the covenant shall he corrupt by flatteries: but the people that do know their God shall be strong, and do exploits.",
+        NKJV: "32 Those who do wickedly against the covenant he shall corrupt with flattery; but the people who know their God shall be strong, and carry out great exploits.",
+        NIV: "32 With flattery he will corrupt those who have violated the covenant, but the people who know their God will firmly resist him.",
+        ESV: "32 He shall seduce with flattery those who violate the covenant, but the people who know their God shall stand firm and take action.",
+        AMP: "32 With smooth words [of flattery and praise] he will turn to godlessness those who [are willing to] disregard the [Mosaic] covenant, but the people who [are spiritually mature and] know their God will display strength and take action [to resist].",
+        NLT: "32 He will flatter and win over those who have violated the covenant. But the people who know their God will be strong and will resist him.",
+    },
+    "Proverbs 24:4-5": {
+        KJV: "4 And by knowledge shall the chambers be filled With all precious and pleasant riches. 5 A wise man is strong; Yea, a man of knowledge increaseth strength.",
+        NKJV: "4 By knowledge the rooms are filled With all precious and pleasant riches. 5 A wise man is strong, Yes, a man of knowledge increases strength.",
+        NIV: "4 through knowledge its rooms are filled with rare and beautiful treasures. 5 The wise prevail through great power, and those who have knowledge muster their strength.",
+        ESV: "4 and by knowledge the rooms are filled with all precious and pleasant riches. 5 A wise man is strong, and a man of knowledge increases strength,",
+        AMP: "4 And by knowledge its rooms are filled With all precious and pleasant riches. 5 A wise man is strong, And a man of knowledge strengthens his power; [Prov 21:22; Eccl 9:16]",
+        NLT: "4 Through knowledge its rooms are filled with all sorts of precious riches and valuables. 5 The wise are mightier than the strong, and those with knowledge grow stronger and stronger.",
+    },
+    "John 1:9": {
+        KJV: "9 That was the true Light, which lighteth every man that cometh into the world.",
+        NKJV: "9 That was the true Light which gives light to every man coming into the world.",
+        NIV: "9 The true light that gives light to everyone was coming into the world.",
+        ESV: "9 The true light, which enlightens everyone, was coming into the world.",
+        AMP: "9 There was the true Light then coming into the world [the genuine, perfect, steadfast Light] that illumines every person.",
+        NLT: "9 The one who is the true light, who gives light to everyone, was coming into the world.",
+    },
+
+    "Hosea 4:6": {
+        KJV: "6 My people are destroyed for lack of knowledge: because thou hast rejected knowledge, I will also reject thee, that thou shalt be no priest to me: seeing thou hast forgotten the law of thy God, I will also forget thy children.",
+        NKJV: "6 My people are destroyed for lack of knowledge. Because you have rejected knowledge, I also will reject you from being My priest; Because you have forgotten the law of your God, I also will forget your children.",
+        NIV: "6 my people are destroyed from lack of knowledge. 'Because you have rejected knowledge, I also reject you as my priests; because you have ignored the law of your God, I also will ignore your children.",
+        ESV: "6 My people are destroyed for lack of knowledge; because you have rejected knowledge, I reject you from being a priest to me. And since you have forgotten the law of your God, I also will forget your children.",
+        AMP: "6 My people are destroyed for lack of knowledge [of My law, where I reveal My will]. Because you [the priestly nation] have rejected knowledge, I will also reject you from being My priest. Since you have forgotten the law of your God, I will also forget your children.",
+        NLT: "6 My people are being destroyed because they don’t know me. Since you priests refuse to know me, I refuse to recognize you as my priests. Since you have forgotten the laws of your God, I will forget to bless your children.",
+    },
+    "John 6:68-69": {
+        KJV: "68 Then Simon Peter answered him, Lord, to whom shall we go? thou hast the words of eternal life. 69 And we believe and are sure that thou art that Christ, the Son of the living God.",
+        NKJV: "68 But Simon Peter answered Him, “Lord, to whom shall we go? You have the words of eternal life. 69 Also we have come to believe and know that You are the Christ, the Son of the living God.”",
+        NIV: "68 Simon Peter answered him, 'Lord, to whom shall we go? You have the words of eternal life. 69 We have come to believe and to know that you are the Holy One of God.'",
+        ESV: "68 Simon Peter answered him, “Lord, to whom shall we go? You have the words of eternal life, 69 and we have believed, and have come to know, that you are the Holy One of God.”",
+        AMP: "68 Simon Peter answered, “Lord, to whom shall we go? You [alone] have the words of eternal life [you are our only hope]. 69 We have believed and confidently trusted, and [even more] we have come to know [by personal observation and experience] that You are the Holy One of God [the Christ, the Son of the living God].”.",
+        NLT: "68 Simon Peter replied, “Lord, to whom would we go? You have the words that give eternal life. 69 We believe, and we know you are the Holy One of God.”",
+    },
+    "Isaiah 61:1-3": {
+        KJV: "1 The Spirit of the Lord GOD is upon me; because the LORD hath anointed me to preach good tidings unto the meek; he hath sent me to bind up the brokenhearted, to proclaim liberty to the captives, and the opening of the prison to them that are bound; 2 To proclaim the acceptable year of the LORD, and the day of vengeance of our God; to comfort all that mourn; 3 To appoint unto them that mourn in Zion, to give unto them beauty for ashes, the oil of joy for mourning, the garment of praise for the spirit of heaviness; that they might be called trees of righteousness, the planting of the LORD, that he might be glorified.",
+        NKJV: "1 The Spirit of the Lord GOD is upon Me, Because the LORD has anointed Me To preach good tidings to the poor; He has sent Me to heal the brokenhearted, To proclaim liberty to the captives, And the opening of the prison to those who are bound; 2 To proclaim the acceptable year of the LORD, And the day of vengeance of our God; To comfort all who mourn, 3 To console those who mourn in Zion, To give them beauty for ashes, The oil of joy for mourning, The garment of praise for the spirit of heaviness; That they may be called trees of righteousness, The planting of the LORD, that He may be glorified.",
+        NIV: "1 The Spirit of the Sovereign LORD is on me, because the LORD has anointed me to proclaim good news to the poor. He has sent me to bind up the brokenhearted, to proclaim freedom for the captives and release from darkness for the prisoners, 2 to proclaim the year of the LORD’s favor and the day of vengeance of our God, to comfort all who mourn, 3 and provide for those who grieve in Zion—to bestow on them a crown of beauty instead of ashes, the oil of joy instead of mourning, and a garment of praise instead of a spirit of despair. They will be called oaks of righteousness, a planting of the LORD for the display of his splendor.",
+        ESV: "1 The Spirit of the Lord GOD is upon me, because the LORD has anointed me to bring good news to the poor; he has sent me to bind up the brokenhearted, to proclaim liberty to the captives, and the opening of the prison to those who are bound; 2 to proclaim the year of the LORD's favor, and the day of vengeance of our God; to comfort all who mourn; 3 to grant to those who mourn in Zion—to give them a beautiful headdress instead of ashes, the oil of gladness instead of mourning, the garment of praise instead of a faint spirit; that they may be called oaks of righteousness, the planting of the LORD, that he might be glorified.",
+        AMP: "1 The Spirit of the Lord GOD is upon me, Because the LORD has anointed and commissioned me To bring good news to the humble and afflicted; He has sent me to bind up [the wounds of] the brokenhearted, To proclaim release [from confinement and condemnation] to the [physical and spiritual] captives And freedom to prisoners, 2 To proclaim [a]the favorable year of the Lord, [b]And the day of vengeance and retribution of our God, To comfort all who mourn, 3 To [c]console those who mourn in Zion, To give them beauty for ashes, The oil of joy for mourning, The garment of praise for a spirit of heaviness, That they may be called trees of righteousness [locally], The planting of the Lord, that He may be glorified.",
+        NLT: "1 The Spirit of the Sovereign LORD is upon me, for the LORD has anointed me to bring good news to the poor. He has sent me to comfort the brokenhearted, to proclaim that captives will be released and prisoners will be freed. 2 He has sent me to tell those who mourn that the time of the LORD’s favor has come, and with it, the day of God’s anger against their enemies. 3 To all who mourn in Israel, he will give a crown of beauty for ashes, a joyous blessing instead of mourning, festive praise instead of despair. In their righteousness, they will be like great oaks that the LORD has planted for his own glory.",
+    },
+    "Isaiah 53:4-5": {
+        KJV: "4 Surely he hath borne our griefs, and carried our sorrows: yet we did esteem him stricken, smitten of God, and afflicted. 5 But he was wounded for our transgressions, he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed.",
+        NKJV: "4 Surely He has borne our griefs And carried our sorrows; Yet we esteemed Him stricken, Smitten by God, and afflicted. 5 But He was wounded for our transgressions, He was bruised for our iniquities; The chastisement for our peace was upon Him, And by His stripes we are healed.",
+        NIV: "4 Surely he took up our pain and bore our suffering, yet we considered him punished by God, stricken by him, and afflicted. 5 But he was pierced for our transgressions, he was crushed for our iniquities; the punishment that brought us peace was on him, and by his wounds we are healed.",
+        ESV: "4 Surely he has borne our griefs and carried our sorrows; yet we esteemed him stricken, smitten by God, and afflicted. 5 But he was wounded for our transgressions; he was crushed for our iniquities; upon him was the chastisement that brought us peace, and with his stripes we are healed.",
+        AMP: "4 Surely He has [a]borne our griefs (sicknesses, weaknesses, and distresses) and carried our sorrows and pain; yet we [ignorantly] assumed that He was stricken, struck down by God, and degraded and humiliated [by Him]. 5 But He was wounded for our transgressions, He was crushed for our wickedness [our sin, our injustice, our wrongdoing]; The punishment [required] for our well-being fell on Him, And by His stripes (wounds) we are healed.",
+        NLT: "4 Yet it was our weaknesses he carried; it was our sorrows that weighed him down. And we thought his troubles were a punishment from God, a punishment for his own sins! 5 But he was pierced for our rebellion, crushed for our sins. He was beaten so we could be whole. He was whipped so we could be healed.",
+    },
+    "Matthew 11:25-26": {
+        KJV: "25 At that time Jesus answered and said, I thank thee, O Father, Lord of heaven and earth, because thou hast hid these things from the wise and prudent, and hast revealed them unto babes. 26 Even so, Father: for so it seemed good in thy sight.",
+        NKJV: "25 At that time Jesus answered and said, 'I thank You, Father, Lord of heaven and earth, that You have hidden these things from the wise and prudent and have revealed them to babes. 26 Even so, Father, for so it seemed good in Your sight.'",
+        NIV: "25 At that time Jesus said, 'I praise you, Father, Lord of heaven and earth, because you have hidden these things from the wise and learned, and revealed them to little children. 26 Yes, Father, for this is what you were pleased to do.'",
+        ESV: "25 At that time Jesus declared, 'I thank you, Father, Lord of heaven and earth, that you have hidden these things from the wise and understanding and revealed them to little children; 26 yes, Father, for such was your gracious will.'",
+        AMP: "25 At that time Jesus began to speak and said, “I praise and thank You, Father, Lord of heaven and earth, that You have hidden these things from the wise and intelligent and clever, and have revealed them to infants [the childlike and untaught]. 26 Yes, Father, for this way was [agreeable and] well-pleasing in Your sight.",
+        NLT: "25 At that time Jesus prayed this prayer: 'O Father, Lord of heaven and earth, thank you for hiding these things from those who think themselves wise and clever, and for revealing them to the childlike. 26 Yes, Father, it pleased you to do it this way!'",
+    },
+    "Isaiah 9:6-7": {
+        KJV: "6 For unto us a child is born, unto us a son is given: and the government shall be upon his shoulder: and his name shall be called Wonderful, Counsellor, The mighty God, The everlasting Father, The Prince of Peace. 7 Of the increase of his government and peace there shall be no end, upon the throne of David, and upon his kingdom, to order it, and to establish it with judgment and with justice from henceforth even for ever. The zeal of the LORD of hosts will perform this.",
+        NKJV: "6 For unto us a Child is born, Unto us a Son is given; And the government will be upon His shoulder. And His name will be called Wonderful, Counselor, Mighty God, Everlasting Father, Prince of Peace. 7 Of the increase of His government and peace There will be no end, Upon the throne of David and over His kingdom, To order it and establish it with judgment and justice From that time forward, even forever. The zeal of the LORD of hosts will perform this.",
+        NIV: "6 For to us a child is born, to us a son is given, and the government will be on his shoulders. And he will be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace. 7 Of the greatness of his government and peace there will be no end. He will reign on David’s throne and over his kingdom, establishing and upholding it with justice and righteousness from that time on and forever. The zeal of the LORD Almighty will accomplish this.",
+        ESV: "6 For to us a child is born, to us a son is given; and the government shall be upon his shoulder, and his name shall be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace. 7 Of the increase of his government and of peace there will be no end, on the throne of David and over his kingdom, to establish it and to uphold it with justice and with righteousness from this time forth and forevermore. The zeal of the LORD of hosts will do this.",
+        AMP: "6 For to us a Child shall be born, unto us a Son shall be given; And the government shall be upon His shoulder; And His name shall be called Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace. 7 There shall be no end to the increase of His government and of peace, [He shall rule] on the throne of David and over his kingdom, To establish it and to uphold it with justice and righteousness From that time forward and forevermore. The zeal of the LORD of hosts will accomplish this.",
+        NLT: "6 For a child is born to us, a son is given to us. The government will rest on his shoulders. And he will be called: Wonderful Counselor, Mighty God, Everlasting Father, Prince of Peace. 7 His government and its peace will never end. He will rule with fairness and justice from the throne of his ancestor David for all eternity. The passionate commitment of the LORD of Heaven’s Armies will make this happen!",
+    },
+    "Titus 1:14": {
+        KJV: "14 Not giving heed to Jewish fables, and commandments of men, that turn from the truth.",
+        NKJV: "14 not giving heed to Jewish fables and commandments of men who turn from the truth.",
+        NIV: "14 and will pay no attention to Jewish myths or to the merely human commands of those who reject the truth.",
+        ESV: "14 not devoting themselves to Jewish myths and the commands of people who turn away from the truth.",
+        AMP: "14 and will not pay attention to Jewish myths and the instructions of men who turn away from the truth.",
+        NLT: "14 They must stop listening to Jewish myths and the commands of people who have turned away from the truth.",
+    },
+    "Acts 2:42": {
+        KJV: "42 And they continued stedfastly in the apostles' doctrine and fellowship, and in breaking of bread, and in prayers.",
+        NKJV: "42 And they continued steadfastly in the apostles’ doctrine and fellowship, in the breaking of bread, and in prayers.",
+        NIV: "42 They devoted themselves to the apostles’ teaching and to fellowship, to the breaking of bread and to prayer.",
+        ESV: "42 And they devoted themselves to the apostles' teaching and the fellowship, to the breaking of bread and the prayers.",
+        AMP: "42 And they continued steadfastly in the apostles’ teaching and the fellowship, in the breaking of bread, and in prayers.",
+        NLT: "42 All the believers devoted themselves to the apostles’ teaching, and to fellowship, and to sharing in meals (including the Lord’s Supper), and to prayer.",
+    },
+    "Hebrews 10:25": {
+        KJV: "25 Not forsaking the assembling of ourselves together, as the manner of some is; but exhorting one another: and so much the more, as ye see the day approaching.",
+        NKJV: "25 not forsaking the assembling of ourselves together, as is the manner of some, but exhorting one another, and so much the more as you see the Day approaching.",
+        NIV: "25 not giving up meeting together, as some are in the habit of doing, but encouraging one another—and all the more as you see the Day approaching.",
+        ESV: "25 not neglecting to meet together, as is the habit of some, but encouraging one another, and all the more as you see the Day drawing near.",
+        AMP: "25 not forsaking our meeting together [as believers for worship and instruction], as is the habit of some, but encouraging one another; and all the more [faithfully] as you see the day [both of Christ’s coming and of God’s judgment] approaching.",
+        NLT: "25 And let us not neglect our meeting together, as some people do, but encourage one another, especially now that the day of his return is drawing near.",
+    },
+    "Acts 4:19": {
+        KJV: "19 But Peter and John answered and said unto them, Whether it be right in the sight of God to hearken unto you more than unto God, judge ye.",
+        NKJV: "19 But Peter and John answered and said to them, “Whether it is right in the sight of God to listen to you more than to God, you judge.",
+        NIV: "19 But Peter and John replied, “Which is right in God’s eyes: to listen to you, or to him? You be the judges!",
+        ESV: "19 But Peter and John answered them, “Whether it is right in the sight of God to listen to you rather than to God, you must judge,",
+        AMP: "19 But Peter and John replied to them, “Whether it is right in the sight of God to listen to you more than to God, you judge;",
+        NLT: "19 But Peter and John replied, “Do you think God wants us to obey you rather than him? You decide.",
+    },
+
+    "Mark 3:13-15": {
+        KJV: "13 And he goeth up into a mountain, and calleth unto him whom he would: and they came unto him. 14 And he ordained twelve, that they should be with him, and that he might send them forth to preach, 15 And to have power to heal sicknesses, and to cast out devils:",
+        NKJV: "13 And He went up on the mountain and called to Himself those He Himself wanted. And they came to Him. 14 Then He appointed twelve, that they might be with Him and that He might send them out to preach, 15 and to have power to heal sicknesses and to cast out demons:",
+        NIV: "13 Jesus went up on a mountainside and called to him those he wanted, and they came to him. 14 He appointed twelve that they might be with him and that he might send them out to preach 15 and to have authority to drive out demons.",
+        ESV: "13 And he went up on the mountain and called to him those whom he desired, and they came to him. 14 And he appointed twelve (whom he also named apostles) so that they might be with him and he might send them out to preach 15 and have authority to cast out demons.",
+        AMP: "13 He went up on the hillside and called those whom He Himself wanted and chose; and they came to Him. 14 And He appointed twelve [disciples], so that they would be with Him [for instruction] and so that He could send them out to preach [the gospel as apostles—that is, as His special messengers, personally chosen representatives], 15 and to have authority and power to cast out demons.",
+        NLT: "13 Afterward Jesus went up on a mountain and called out the ones he wanted to go with him. And they came to him. 14 Then he appointed twelve of them and called them his apostles. They were to accompany him, and he would send them out to preach, 15 giving them authority to cast out demons.",
+    },
+    "Acts 4:13": {
+        KJV: "13 Now when they saw the boldness of Peter and John, and perceived that they were unlearned and ignorant men, they marvelled; and they took knowledge of them, that they had been with Jesus.",
+        NKJV: "13 Now when they saw the boldness of Peter and John, and perceived that they were uneducated and untrained men, they marveled. And they realized that they had been with Jesus.",
+        NIV: "13 When they saw the courage of Peter and John and realized that they were unschooled, ordinary men, they were astonished and took note that these men had been with Jesus.",
+        ESV: "13 Now when they saw the boldness of Peter and John, and perceived that they were uneducated, common men, they were astonished. And they recognized that they had been with Jesus.",
+        AMP: "13 When they saw the **courage and boldness** of Peter and John, and realized that they were uneducated and untrained [in the Mosaic Law], they were surprised, and they recognized that they had been with Jesus.",
+        NLT: "13 The members of the council were amazed when they saw the boldness of Peter and John, for they could see that they were ordinary men with no special training in the Scriptures. They also recognized them as men who had been with Jesus.",
+    },
+    "2 Timothy 1:12": {
+        KJV: "12 For the which cause I also suffer these things: nevertheless I am not ashamed: for I know whom I have believed, and am persuaded that he is able to keep that which I have committed unto him against that day.",
+        NKJV: "12 For this reason I also suffer these things; nevertheless I am not ashamed, for I know whom I have believed and am persuaded that He is able to keep what I have committed to Him until that Day.",
+        NIV: "12 That is why I am suffering as I am. Yet this is no cause for shame, because I know whom I have believed, and am convinced that he is able to guard what I have entrusted to him until that day.",
+        ESV: "12 which is why I suffer as I do. But I am not ashamed, for I know whom I have believed, and I am convinced that he is able to guard until that day what has been entrusted to me.",
+        AMP: "12 This is why I suffer these things; but I am not ashamed, for I know Him [that is, I have a personal knowledge of Jesus Christ] whom I have believed and trusted [with unquestioning confidence], and I am [absolutely] convinced and sure that He is able to guard and keep safe until that day that which I have entrusted to Him.",
+        NLT: "12 That is why I am suffering here in prison. But I am not ashamed of it, for I know the one in whom I trust, and I am sure that he is able to guard what I have entrusted to him until the day of his return.",
+    },
+    "Proverbs 3:4-5": {
+        KJV: "4 So shalt thou find favour and good understanding In the sight of God and man. 5 Trust in the LORD with all thine heart; And lean not unto thine own understanding.",
+        NKJV: "4 And so find favor and high esteem In the sight of God and man. 5 Trust in the LORD with all your heart, And lean not on your own understanding;",
+        NIV: "4 Then you will win favor and a good name in the sight of God and man. 5 Trust in the LORD with all your heart and lean not on your own understanding;",
+        ESV: "4 So you will find favor and good success In the sight of God and man. 5 Trust in the LORD with all your heart, and do not lean on your own understanding.",
+        AMP: "4 So find favor and high esteem In the sight of God and man. [Luke 2:52] 5 Trust in and rely confidently on the LORD with all your heart And do not rely on your own insight or understanding.",
+        NLT: "4 Then you will find favor with both God and people, and you will earn a good reputation. 5 Trust in the LORD with all your heart; do not depend on your own understanding.",
+    },
+    "Isaiah 1:19": {
+        KJV: "19 If ye be willing and obedient, ye shall eat the good of the land:",
+        NKJV: "19 If you are willing and obedient, You shall eat the good of the land;",
+        NIV: "19 If you are willing and obedient, you will eat the good things of the land;",
+        ESV: "19 If you are willing and obedient, you shall eat the good of the land;",
+        AMP: "19 “If you are willing and obedient, You shall eat the best of the land;",
+        NLT: "19 If you will only obey me, you will have plenty to eat.",
+    },
+    "1 Timothy 1:4": {
+        KJV: "4 Neither give heed to fables and endless genealogies, which minister questions, rather than godly edifying which is in faith: so do.",
+        NKJV: "4 nor give heed to fables and endless genealogies, which cause disputes rather than godly edification which is in faith.",
+        NIV: "4 nor to devote themselves to myths and endless genealogies. These promote controversial speculations rather than advancing God’s work—which is by faith.",
+        ESV: "4 nor devote themselves to myths and endless genealogies, which promote speculations rather than the stewardship from God that is by faith.",
+        AMP: "4 nor to pay attention to legends (fables, myths) and endless genealogies, which give rise to useless speculation and meaningless arguments rather than advancing God’s [work which is to be accomplished] by faith [in Him].",
+        NLT: "4 Don’t let them waste their time in endless discussion of myths and spiritual pedigrees. These things only lead to meaningless speculations, which don’t help people live a life of faith in God.",
     },
 };
 
@@ -669,6 +538,7 @@ const SundaySchoolApp = () => {
         memoryVerseRef: string;
         introduction: string;
         introScriptures: string[];
+        lessonIntroScriptures: string[];
         aims: string;
         objectives: string;
         lessonIntro: string;
@@ -679,65 +549,98 @@ const SundaySchoolApp = () => {
     };
 
     const [contentData, setContentData] = useState<ContentData>({
-        lessonDate: "April 12, 2015",
-        lessonTitle: "Your Position About Jesus Christ – Part 2",
+        lessonDate: "April 19, 2015",
+        lessonTitle: "Your Position About Jesus Christ - Part 3",
         memoryVerse:
-            "And we believe and are sure that thou art that Christ, the son of the living God. — John 6:69",
-        memoryVerseRef: "John 6:69",
+            "And such as do wickedly against the covenant shall he corrupt by flatteries: but the people that do know their God shall be strong, and do exploits.",
+        memoryVerseRef: "Daniel 11:32",
         introduction:
-            "Man in his several attempts to access God failed but gathered more reasons to become religious. Others had God so inclined to them but distorted His doctrines and aims to reveal Himself to them. These few groups included people neither God inclined to nor fulfilled at the coming of the Lord Jesus. Instead of repenting towards God, they resorted to spoiling the minds of men against Christ to cover their sins and shame which had God-forsaken ways.",
-        introScriptures: ["Luke 15:1–2"],
-        aims: "To reveal man's contempt of Christ and efforts to sabotage Jesus.",
-        objectives:
-            "To help the hearers have a personal conviction about Jesus.",
+            "Having previously established the facts that it is the ignorant or jealous losers and opposers of all ages that coin people out of Jesus, we need to know how to stop them. Knowledge is paramount in this fight to conquer as indicated in the memory verse and Proverbs 24:4–5.",
+        introScriptures: ["Proverbs 24:4-5"],
+        aims: "To reveal man's contempt of Christ and efforts to sabotage His gesture.",
+        objectives: "That men may have a personal conviction about Christ.",
         lessonIntro:
-            "In our last study, we discovered that the Pharisees and scribes were at the front line of those who opposed Jesus and His ministry. We also saw how a huge number of religious leaders and clans were working to discourage the followers of Jesus Christ.",
+            "Jesus is the light, and those in the light cannot stumble - John 1:9, 8:12. How then could you allow ignorant people to persuade you that are in the light from serving or following Jesus fully? Ignorance destroys the strong and mighty, but personal conviction preserves - Hos. 4:6, John 6:68-69. Today's lesson reveals how to be personally convinced and stop the opposers.",
+        // lesonIntroScriptures["John 1:9"],
+        lessonIntroScriptures: [
+            "John 1:9",
+            "John 8:12",
+            "Hosea 4:6",
+            "John 6:68-69",
+        ],
+
         lessonPoints: [
             {
-                title: "Judgement and Condemnation verse 2 ",
+                title: "How to Have a Personal Conviction",
                 content:
-                    "Nothing destroys a man and his course faster than character assassination. Jesus was increasing while they were decreasing. Jesus had all they didn’t have, and the people kept pressing to Him. To stop this, they brought damnable accusations against Him to bring Him down before the people. They said in conclusion:",
-                scriptures: ["Luke 15:2"],
-                subPoints: [
-                    {
-                        title: " This Man Receives Sinners",
-                        content:
-                            "This means that He is one among the sinners so that the people should see reasons to turn from Him.",
-                    },
-                    {
-                        title: "This Man Eats With Sinners",
-                        content:
-                            "It means that He is defiled. In a nutshell, they have passed judgment that He is insignificant to follow.",
-                    },
-                ],
+                    "Jesus fits perfectly into your needs Is. 61:1-3, Is. 53:4-5, This poor sinners and the tormented are quick to come to Jesus because of their conditions. Most people are rejected or barred by society and need someone to lean on. Jesus fits into their needs, and this is why they discourage you. But if you know how Jesus fits into your life, you will tarry with Him.",
+                scriptures: ["Isaiah 61:1-3", "Isaiah 53:4-5"],
+                subPoints: [],
             },
             {
-                title: "The Pharisees and Scribes",
+                title: "Others Don’t See What You See",
+                content:
+                    "God reveals to the lowly and humble Matt. 11:25-26. That is why you must stick to Jesus.",
+                scriptures: ["Matthew 11:25-26"],
+                subPoints: [],
+            },
+            {
+                title: "Consider the Prophecies About Him",
                 content: "",
-                scriptures: [],
-                subPoints: [
-                    {
-                        title: "Pharisees",
-                        content:
-                            "These are religious lawyers, hypocrites, and enemies of the Christ who pretend to be working for God. There are many of such people around you who use philosophy and legalism to discourage you from following Jesus.",
-                    },
-                    {
-                        title: "Scribes",
-                        content:
-                            "These are custodians of the Jewish faith and traditions. They are always in the temple reading and teaching the people. They compile the laws and the prophets and are supposed to teach the people the truth of God’s word. But they have chosen to turn people from the truth to preserve their beliefs and confuse people from following Jesus.",
-                    },
-                ],
+                scriptures: ["Isaiah 9:6-7"],
+                subPoints: [],
+            },
+            {
+                title: "Come and Be with Christ",
+                content: "",
+                scriptures: ["Mark 3:13-15", "Acts 4:13"],
+                subPoints: [],
+            },
+            {
+                title: "Be Purposeful and Focused",
+                content:
+                    "2 Tim. 1:12, If you are purposeful and focused, nobody can turn you away from Jesus. Obey His instructions.",
+                scriptures: ["2 Timothy 1:12"],
+                subPoints: [],
+            },
+            {
+                title: "Trust and Obey",
+                content:
+                    "Prov. 3:4-5, Isa. 1:19. Believe and practice God's word and the manifestation will convince you.",
+                scriptures: ["Proverbs 3:4-5", "Isaiah 1:19"],
+                subPoints: [],
+            },
+            {
+                title: "Avoid Those Who Hate Christ",
+                content:
+                    "1 Tim. 1:4, Titus 1:14. Words are powerful. If you avoid the words of Christ-haters, your conviction will appear.",
+                scriptures: ["1 Timothy 1:4", "Titus 1:14"],
+                subPoints: [],
+            },
+            {
+                title: "Constant Fellowship",
+                content:
+                    "Through praise, worship, study, fasting, personal prayer life, and congregating with other believers - Acts 2:42, Hebrews 10:25",
+                scriptures: ["Acts 2:42", "Hebrews 10:25"],
+                subPoints: [],
+            },
+            {
+                title: "Ask the Opposers the Unanswerable Question",
+                content:
+                    "Ask whether you should obey them or Jesus - Acts 4:19.",
+                scriptures: ["Acts 4:19"],
+                subPoints: [],
             },
         ],
         conclusion:
-            "Strive to know Christ better in a personal way. This you do by study and practice of the Word with constant fellowship. This will keep you from the jealous opposers of Jesus Christ. — John 6:66–69",
-        conclusionScriptures: ["John 6:66-69"],
+            "If you know whom you have come to serve and are persuaded that He is the Messiah, no enemy of Jesus will be able to turn you away from Him. Draw nearer to Him and you will know Him better.",
+        conclusionScriptures: [],
         prayerPoints: [
-            "Lord, help me to stand firm in my conviction about Jesus Christ.",
-            "Father, protect me from those who seek to turn my heart away from the truth.",
-            "Holy Spirit, teach me to know Christ personally and deeply.",
-            "Lord, grant me wisdom to overcome false doctrines and legalistic influences.",
-            "Father, help me to walk in constant fellowship with Christ and resist every opposition.",
+            "Lord, help me to be personally convinced about Jesus Christ.",
+            "Father, keep me strong against opposers of the faith.",
+            "Holy Spirit, reveal Jesus to me more deeply.",
+            "Lord, help me to trust and obey Your word always.",
+            "Father, strengthen my fellowship life and help me stay connected to other believers.",
         ],
     });
 
@@ -1530,6 +1433,24 @@ const SundaySchoolApp = () => {
                                 ) : (
                                     <p className="leading-relaxed mb-4">
                                         {contentData.lessonIntro}
+                                        <div className="mt-4 flex flex-wrap gap-2">
+                                            {contentData.lessonIntroScriptures.map(
+                                                (scripture) => (
+                                                    <button
+                                                        key={scripture}
+                                                        onClick={() =>
+                                                            showBibleVersions(
+                                                                scripture
+                                                            )
+                                                        }
+                                                        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition flex items-center gap-2 text-sm"
+                                                    >
+                                                        <BookOpen size={14} />
+                                                        {scripture}
+                                                    </button>
+                                                )
+                                            )}
+                                        </div>
                                     </p>
                                 )}
                                 <div className="space-y-6">
