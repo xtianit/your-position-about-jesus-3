@@ -302,16 +302,6 @@ const initialScriptureDB: ScriptureDB = {
 
 const quizQuestions = [
     {
-        q: "According to the Memory Verse (Daniel 11:32), what will the people who know their God do?",
-        a: [
-            "They shall be strong and do exploits",
-            "They will become wealthy",
-            "They shall speak in new tongues",
-            "They will live without persecution",
-        ],
-        correct: 0,
-    },
-    {
         q: "Which scripture is referenced in the introduction as essential for knowledge and strength?",
         a: [
             "Proverbs 24:4–5",
@@ -398,106 +388,6 @@ const quizQuestions = [
             "John 3:3",
             "Luke 12:48",
             "Matthew 28:20",
-        ],
-        correct: 0,
-    },
-    {
-        q: "Which scripture is used in the lesson to emphasize prophecies about Christ?",
-        a: [
-            "Isaiah 9:6-7",
-            "Jeremiah 31:31",
-            "Micah 5:2",
-            "Psalm 110:1",
-        ],
-        correct: 0,
-    },
-    {
-        q: "What scripture references Jesus calling people to be with Him?",
-        a: [
-            "Mark 3:13-15 and Acts 4:13",
-            "Luke 6:12-13 and John 15:5",
-            "Matthew 9:9 and John 21:19",
-            "Acts 1:8 and Romans 10:17",
-        ],
-        correct: 0,
-    },
-    {
-        q: "According to the lesson, what helps a believer stay unwavering in their walk with Christ?",
-        a: [
-            "Being purposeful and focused",
-            "Following popular opinions",
-            "Engaging in debates",
-            "Collecting religious relics",
-        ],
-        correct: 0,
-    },
-    {
-        q: "Which scripture emphasizes trusting and obeying God for manifestation?",
-        a: [
-            "Proverbs 3:4-5 and Isaiah 1:19",
-            "Psalm 91:1-2 and Mark 11:24",
-            "Luke 1:37 and John 14:12",
-            "Romans 5:1 and James 2:17",
-        ],
-        correct: 0,
-    },
-    {
-        q: "Why does the lesson warn believers to avoid those who hate Christ?",
-        a: [
-            "Because their words can weaken your conviction",
-            "Because they are dangerous physically",
-            "Because they can curse you",
-            "Because they know hidden knowledge",
-        ],
-        correct: 0,
-    },
-    {
-        q: "Which scriptures are used to warn against listening to Christ-haters?",
-        a: [
-            "1 Timothy 1:4 and Titus 1:14",
-            "Hebrews 12:1 and Psalm 1:1",
-            "Proverbs 10:19 and Job 32:8",
-            "James 3:5-6 and Romans 16:17",
-        ],
-        correct: 0,
-    },
-    {
-        q: "According to the lesson, what strengthens personal conviction through spiritual habits?",
-        a: [
-            "Constant fellowship",
-            "Frequent travel",
-            "Joining debates",
-            "Performing rituals",
-        ],
-        correct: 0,
-    },
-    {
-        q: "Which scriptures highlight the importance of fellowship?",
-        a: [
-            "Acts 2:42 and Hebrews 10:25",
-            "Psalm 23:6 and Luke 4:18",
-            "1 John 4:8 and Matthew 6:33",
-            "Romans 12:1 and Ephesians 5:25",
-        ],
-        correct: 0,
-    },
-    {
-        q: "What question does the lesson tell believers to ask opposers?",
-        a: [
-            "Should I obey you or Jesus?",
-            "Why do you hate Jesus?",
-            "When did you start resisting the truth?",
-            "Do you know the Scriptures?",
-        ],
-        correct: 0,
-    },
-    {
-        q: "Which scripture shows the apostles asking whether they should obey men or God?",
-        a: [
-            "Acts 4:19",
-            "John 7:17",
-            "Matthew 10:22",
-            "Romans 8:31",
         ],
         correct: 0,
     },
