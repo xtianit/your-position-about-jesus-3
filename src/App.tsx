@@ -993,7 +993,7 @@ const SundaySchoolApp = () => {
                             Sunday School Lesson
                         </h1>
                         <p className="text-xl opacity-80">
-                            Your Position About Jesus Christ - Part 1
+                            Your Position About Jesus Christ - Part 3
                         </p>
                     </div>
                     <div className="grid md:grid-cols-2 gap-6">
